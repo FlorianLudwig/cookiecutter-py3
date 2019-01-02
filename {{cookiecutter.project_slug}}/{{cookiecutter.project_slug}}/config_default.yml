@@ -1,0 +1,5 @@
+mongodb:
+  default:
+    host: localhost:27017
+    db: {{ cookiecutter.project_slug }}
+
