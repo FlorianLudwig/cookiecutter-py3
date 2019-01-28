@@ -1,0 +1,18 @@
+stages:
+  - test
+  - build
+  - dist
+
+image: 'greyrook/cde-dev-py36:6e1eef7dc9269d32d1e3b0c389050e65f36111bc'
+
+
+test:
+  stage: test
+  script:
+   - pip3 install cookiecutter
+   - export TEMPLATE_PATH=`pwd`
+   - echo $TEMPLATE_PATH
+   - mkdir /tmp/cookiecutter-test
+   - cd /tmp/cookiecutter-test
+   # TODO add --config-file
+   - cookiecutter --replay $TEMPLATE_PATH
