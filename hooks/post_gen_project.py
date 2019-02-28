@@ -25,3 +25,5 @@ if __name__ == '__main__':
         remove_file('LICENSE')
 
     os.system('git init')
+    os.system('pipenv --python 3')
+    os.system('pipenv install')
