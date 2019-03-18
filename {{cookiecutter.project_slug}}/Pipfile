@@ -10,4 +10,4 @@ pip = "==18.0"
 [dev-packages]
 pytest = "*"
 pytest-cov = "*"
-
+pycodestyle = "*"
