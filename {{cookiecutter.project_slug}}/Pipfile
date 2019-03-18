@@ -12,4 +12,4 @@ pytest = "*"
 pytest-cov = "*"
 pycodestyle = "*"
 mypy = "*"
-
+pylint = "*"
