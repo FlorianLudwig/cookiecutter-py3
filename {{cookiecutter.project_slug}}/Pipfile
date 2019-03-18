@@ -11,3 +11,5 @@ pip = "==18.0"
 pytest = "*"
 pytest-cov = "*"
 pycodestyle = "*"
+mypy = "*"
+
