@@ -1,0 +1,12 @@
+[MESSAGES CONTROL]
+# no-value-for-parameter
+# results in false positives because of our dependency injection
+
+disable=
+  R,C,W,
+  no-value-for-parameter,
+  no-member # check via mypy
+
+enable=
+  unused-import
+
