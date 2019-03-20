@@ -26,4 +26,4 @@ if __name__ == '__main__':
 
     os.system('git init')
     os.system('pipenv --python 3')
-    os.system('pipenv install')
+    os.system('pipenv install --dev')
