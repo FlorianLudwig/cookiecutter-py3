@@ -6,6 +6,7 @@ verify_ssl = true
 [packages]
 click = "*"
 pip = "==18.0"
+coloredlogs = "==10.0"
 
 [dev-packages]
 pytest = "*"
