@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Console script for {{cookiecutter.project_slug}}."""
 import os
 import sys
@@ -61,8 +59,8 @@ def setup_logging() -> None:
 @click.command()
 def main(args=None):
     """Console script for {{cookiecutter.project_slug}}."""
-    click.echo("Replace this message by putting your code into "
-               "{{cookiecutter.project_slug}}.cli.main")
+    setup_logging()
+    click.echo("Replace this message in the cli.py")
     click.echo("See click documentation at http://click.pocoo.org/")
     return 0
 
