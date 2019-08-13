@@ -16,4 +16,10 @@ async def index(request):
 
 def register(app):
     routes.get('/metrics')(prometheus_async.aio.web.server_stats)
+
+    # aiohttp merges routes with the same name and path into a single resource,
+    # if they are added in direct succession.
+    # For aiohttp_cors to work correctly all mergeable routes must be merged.
+    # Bug: Unmerged routes raise a 403 response on options requests
+    # See: https://github.com/aio-libs/aiohttp-cors/issues/226
     app.add_routes(routes)

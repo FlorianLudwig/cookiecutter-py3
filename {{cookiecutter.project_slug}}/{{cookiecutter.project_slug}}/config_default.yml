@@ -3,3 +3,13 @@ mongodb:
     host: localhost:27017
     db: {{ cookiecutter.project_slug }}
 
+cors:
+  origins:
+    - http://localhost:3000
+    - http://127.0.0.1:3000
+
+#    For local development and debugging
+#    it can be helpful to allow ALL origins
+#    - *
+
+
