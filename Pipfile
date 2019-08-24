@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+cookiecutter = "*"
+
+[dev-packages]
+black = "==19.3b0"
+pytest = "*"
+pytest-cov = "*"
+create-python-app = "*"
+pyyaml = "*"
+pytest-cookies = "*"
+
+[requires]
+python_version = "3.7"
