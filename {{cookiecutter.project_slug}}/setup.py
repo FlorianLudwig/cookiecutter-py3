@@ -8,11 +8,11 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-requirements = [{%- if cookiecutter.command_line_interface|lower == 'click' %}'Click>=6.0',{%- endif %} ]
+requirements = ['Click>=6.0', ]
 
-setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner',{%- endif %} ]
+setup_requirements = ['pytest-runner', ]
 
-test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif %} ]
+test_requirements = ['pytest', ]
 
 {%- set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',
