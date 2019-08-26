@@ -3,16 +3,19 @@ stages:
   - build
   - dist
 
-image: 'greyrook/cde-dev-py36:6e1eef7dc9269d32d1e3b0c389050e65f36111bc'
-
 
 test:
+  image: 'greyrook/cde-dev-py36:6e1eef7dc9269d32d1e3b0c389050e65f36111bc'
   stage: test
+
+  before_script:
+    - pipenv --python `which python3`
+    # pipenv and pip 18.1 are not compatible:
+    # avoid https://github.com/pypa/pipenv/issues/2924
+    - pipenv run pip install pip==18.0
+    - pipenv install --dev
+    - pipenv run pip install -e .
+
   script:
-   - pip3 install cookiecutter
-   - export TEMPLATE_PATH=`pwd`
-   - echo $TEMPLATE_PATH
-   - mkdir /tmp/cookiecutter-test
-   - cd /tmp/cookiecutter-test
-   # TODO add --config-file
-   - cookiecutter --replay $TEMPLATE_PATH
+    - pipenv run py.test tests
+
