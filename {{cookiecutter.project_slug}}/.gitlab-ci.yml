@@ -4,6 +4,6 @@ variables:
 
 
 include:
-  - https://gitlab.com/GreyRook/cde-test-py3/raw/9f0fbfc45c944380c77b6755c711e4ac42df1172/gitlab-ci.yml
+  - https://gitlab.com/GreyRook/cde/gitlab-ci-templates/raw/fc080fcacee715159427131e5cc027549366c7fc/gitlab-ci-py3.yml
 
 
