@@ -14,9 +14,10 @@ async def index(request):
     return web.Response(status=200, body='Hello World')
 
 
-def register(app):
-    routes.get('/metrics')(prometheus_async.aio.web.server_stats)
+routes.get('/metrics')(prometheus_async.aio.web.server_stats)
 
+
+def register(app):
     # aiohttp merges routes with the same name and path into a single resource,
     # if they are added in direct succession.
     # For aiohttp_cors to work correctly all mergeable routes must be merged.
