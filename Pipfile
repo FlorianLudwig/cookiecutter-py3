@@ -13,6 +13,5 @@ pytest-cov = "*"
 create-python-app = "*"
 pyyaml = "*"
 pytest-cookies = "*"
-
-[requires]
-python_version = "3.7"
+sphinx = ">=2.2.0,<3"
+recommonmark = ">=0.6.0,<0.7"
