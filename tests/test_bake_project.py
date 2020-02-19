@@ -9,11 +9,6 @@ from cookiecutter.utils import rmtree
 
 from click.testing import CliRunner
 
-if sys.version_info > (3, 0):
-    import importlib
-else:
-    import imp
-
 
 @contextmanager
 def inside_dir(dirpath):
