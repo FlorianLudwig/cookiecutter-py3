@@ -1,0 +1,8 @@
+[tool.cpa]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_short_description }}"
+authors = ["{{ cookiecutter.full_name.replace("\"", "\\\"") }} <{{ cookiecutter.email }}>"]
+{% if cookiecutter.open_source_license != "Not open source" -%}
+public = true
+{%- endif %}
